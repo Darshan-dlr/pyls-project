@@ -20,17 +20,18 @@ project_root/
 │ └── display.py
 │
 ├── utils/
-│ ├── formatting.py
+│ └── formatting.py
 │
 ├── models/
 │ └── file_system_entry.py
 │
 └── tests/
-├── __init__.py
-├── conftest.py
-├── test_display.py
-├── test_formatting.py
-├── test_file_system_entry.py
+│ └── __init__.py
+│ └── conftest.py
+│ └── test_display.py
+│ └── test_formatting.py
+│ └── test_file_system_entry.py
+
 ```
 
 
