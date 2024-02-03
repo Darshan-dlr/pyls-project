@@ -1,5 +1,6 @@
 from typing import Union 
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+
 
 
 def format_size(size: Union[int, float], human_readable: bool = False) -> str:
@@ -36,5 +37,7 @@ def format_timestamp(timestamp: int) -> str:
     Returns:
         str: Formatted timestamp string.
     """
-    return datetime.utcfromtimestamp(timestamp).strftime('%b %d %H:%M')
-
+    dt = datetime.utcfromtimestamp(timestamp)
+    # UTC+5:30 for Asia/Kolkata
+    local_dt = dt.replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=5, minutes=30) ))  
+    return local_dt.strftime(' %b %d %H:%M')
