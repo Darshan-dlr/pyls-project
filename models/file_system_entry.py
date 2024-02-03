@@ -84,3 +84,18 @@ class FileSystemEntry:
                     return False, f"Error: Unexpected fields found in content entry: {', '.join(unexpected_content_fields)}"
 
         return True, "Dataclass validation successful"
+
+
+    def display_file_tree_structure(self, indent: int = 0) -> None:
+        """
+            Display the file tree structure starting from this FileSystemEntry with proper formatting.
+
+        Args:
+            indent (int): Indentation level for proper tree structure.
+        """
+        print(f"{' ' * indent}{self.name}")
+        for content in self.contents:
+            if content.contents:
+                content.display_file_tree_structure(indent + 4)
+            else:
+                print(f"{' ' * (indent + 4)}|-- {content.name}")

@@ -27,6 +27,8 @@ def main():
     except ValueError as e:
         raise ValueError(f"Validation error: {str(e)}")
 
+    # print(file_tree.display_file_tree_structure()) # to check the file tree structure
+
     if args.list_info:
         display_detailed_file_list(file_tree, args.all, reverse_order=args.reverse, 
                                    sort_by_date=args.sort_by_date, human_readable=args.human_readable,
