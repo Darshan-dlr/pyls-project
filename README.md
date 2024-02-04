@@ -13,6 +13,7 @@ pyls-project/
 │
 ├── .gitignore
 ├── Readme.md
+├── pyproject.toml
 │
 ├── pyls/
 │   ├── core/
@@ -34,7 +35,6 @@ pyls-project/
 │   ├── __init__.py
 │   ├── __main__.py
 │   └── sample_json.json
-│   └── pyproject.toml
 │  
 
 ```
@@ -45,7 +45,8 @@ pyls-project/
 ### Prerequisites
 
 - Python 3.7 or later
-- Pytest 5.2.1 or later
+- setuptools 65.6.3 or later
+- pytest 5.2.1 or later
 
 ### Clone the repository:
 
