@@ -34,8 +34,8 @@ pyls-project/
 │   ├── __init__.py
 │   ├── __main__.py
 │   └── sample_json.json
-
-
+│   └── pyproject.toml
+│  
 
 ```
 
@@ -49,16 +49,38 @@ pyls-project/
 
 ### Clone the repository:
 
-   ```bash
-   git clone <repository-url>
-   cd project_root
+   ```
+   git clone https://github.com/Darshan-dlr/pyls-project.git
+   cd pyls-project
    ```
 
 
 ### Running the Tool
-To use the File System Viewer, run the main.py script with appropriate command-line arguments.
 
-` python main.py [-h] [-l] [-r] [-t] [-H] [-a] [--filter {file,dir}] `
+- To display file system names:
+`python -m pyls -a --filter file`
+
+- To display file system detailed information:
+`python -m pyls -l -a -r -t -H --filter dir`
+
+_Adjust the command options based on your preferences._
+
+- For detialed info of arguments use 
+`python -m pyls -h`
+
+### Installing the tool
+
+* After cloning the repository and navigating into the pyls-project directory, use the following command to install:
+
+`pip install .`
+
+
+* Now we can directly use the command like:
+
+`pyls -a --filter file`
+
+`pyls -l -a -r -t -H --filter dir`
+
 
 
 ### Options
@@ -72,7 +94,8 @@ To use the File System Viewer, run the main.py script with appropriate command-l
 - -d --display-tree: Show the tree structure.
 
 ### Bonus
-- use `python -m pyls -d` to display the file tree structure
-- additonal combination which works 
-   - `pyls -a --filter=<dir/file>`
-   - `pyls -l -a`
+- Use `python -m pyls -d` to display the file tree structure
+- Additonal combination which works 
+
+      1. pyls -a --filter=<dir/file>
+      2. pyls -l -a

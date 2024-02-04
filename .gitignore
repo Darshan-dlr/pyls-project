@@ -4,3 +4,4 @@ venv/
 env/
 pyls.egg-info
 .pytest_cache/
+build/
