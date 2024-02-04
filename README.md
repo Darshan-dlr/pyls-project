@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **pyls** project is a Python command-line tool, similar to the 'ls' command, allowing users to view information about a file system. The data is currently stored in the [sample_json.json](https://github.com/Darshan-dlr/pyls-project/blob/main/sample_json.json) file. pyls offers functionalities such as listing files in a table format, sorting files, and filtering based on specific criteria.
+The **pyls** project is a Python command-line tool, similar to the 'ls' command, allowing users to view information about a file system. The data is currently stored in the [sample_json.json](https://github.com/Darshan-dlr/pyls-project/blob/main/pyls/sample_json.json) file. pyls offers functionalities such as listing files in a table format, sorting files, and filtering based on specific criteria.
 
 ## Project Structure
 
