@@ -1,6 +1,6 @@
 import pytest
 
-from models.file_system_entry import FileSystemEntry
+from pyls.models.file_system_entry import FileSystemEntry
 
 
 @pytest.fixture

@@ -1,5 +1,5 @@
 import pytest
-from utils.formatting import format_size, format_timestamp
+from pyls.utils.formatting import format_size, format_timestamp
 
 @pytest.mark.parametrize("input_size, human_readable, expected_output", [
     (11024, True, "10.8K"),

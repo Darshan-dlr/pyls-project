@@ -2,7 +2,6 @@ from typing import Union
 from datetime import datetime, timezone, timedelta
 
 
-
 def format_size(size: Union[int, float], human_readable: bool = False) -> str:
     """
         Format the size in human-readable or standard format.

@@ -1,4 +1,4 @@
-from core.display import sort_files, display_detailed_file_list, display_files_names
+from pyls.core.display import sort_files, display_detailed_file_list, display_files_names
 
 
 def test_sort_files_by_name(sample_file_system_entry):

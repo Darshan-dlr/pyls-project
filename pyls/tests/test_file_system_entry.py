@@ -1,5 +1,5 @@
 import pytest
-from models.file_system_entry import FileSystemEntry
+from pyls.models.file_system_entry import FileSystemEntry
 
 def test_invalid_json_data_missing_field(invalid_json_data_missing_field):
     with pytest.raises(ValueError, match="Validation error during creation from JSON: Error: Missing mandatory fields."):

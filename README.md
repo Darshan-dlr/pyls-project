@@ -9,28 +9,33 @@ The **pyls** project is a Python command-line tool, similar to the 'ls' command,
 The project follows a structured layout to maintain code organization and modularity.
 
 ```
-project_root/
+pyls-project/
 │
-├── main.py
 ├── .gitignore
 ├── Readme.md
-├── sample_json.json
 │
-├── core/
-│ └── display.py
-│
-├── utils/
-│ └── formatting.py
-│
-├── models/
-│ └── file_system_entry.py
-│
-└── tests/
-│ └── __init__.py
-│ └── conftest.py
-│ └── test_display.py
-│ └── test_formatting.py
-│ └── test_file_system_entry.py
+├── pyls/
+│   ├── core/
+│   │   └── display.py
+│   │
+│   ├── utils/
+│   │   └── formatting.py
+│   │
+│   ├── models/
+│   │   └── file_system_entry.py
+│   │
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   ├── conftest.py
+│   │   ├── test_display.py
+│   │   ├── test_formatting.py
+│   │   └── test_file_system_entry.py
+│   │
+│   ├── __init__.py
+│   ├── __main__.py
+│   └── sample_json.json
+
+
 
 ```
 
@@ -40,6 +45,7 @@ project_root/
 ### Prerequisites
 
 - Python 3.7 or later
+- Pytest 5.2.1 or later
 
 ### Clone the repository:
 
@@ -57,12 +63,16 @@ To use the File System Viewer, run the main.py script with appropriate command-l
 
 ### Options
 - -h, --help: Show help message and exit.
-- -l, --list: List files in a table format.
+- -l, --list-info: List detailed file info in table format.
 - -r, --reverse: Print files in reverse order.
 - -t, --sort-by-date: Sort files by date.
 - -H, --human-readable: Show human-readable size format.
 - -a, --all: Show hidden files.
 - --filter {file,dir}: Filter files or directories.
+- -d --display-tree: Show the tree structure.
 
 ### Bonus
-_Added a functionality [display_file_tree_structure](https://github.com/Darshan-dlr/pyls-project/blob/5c61c705e086bd07a87df074ab356c0736c2e094/models/file_system_entry.py#L89) can print the tree strcture of the json file_
+- use `python -m pyls -d` to display the file tree structure
+- additonal combination which works 
+   - `pyls -a --filter=<dir/file>`
+   - `pyls -l -a`

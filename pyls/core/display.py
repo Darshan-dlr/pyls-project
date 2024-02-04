@@ -1,7 +1,7 @@
 from typing import Optional, List
 
-from models.file_system_entry import FileSystemEntry
-from utils.formatting import format_size, format_timestamp
+from pyls.models.file_system_entry import FileSystemEntry
+from pyls.utils.formatting import format_size, format_timestamp
 
 
 def should_include_item(item: FileSystemEntry, show_hidden: bool = False, content_filter: Optional[str] = None) -> bool:
