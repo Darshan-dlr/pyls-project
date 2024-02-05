@@ -95,7 +95,8 @@ _Adjust the command options based on your preferences._
 - -d --display-tree: Show the tree structure.
 
 ### Bonus
-- Use `python -m pyls -d` to display the file tree structure
+- Included validation for the json file that will be utilised.
+- Use `python -m pyls -d` to display the file tree structure.
 - Additonal combination which works 
 
       1. pyls -a --filter=<dir/file>
